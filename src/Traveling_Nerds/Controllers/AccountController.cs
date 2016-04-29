@@ -19,7 +19,7 @@ namespace Traveling_Nerds.Controllers
         {
             _userManager = userManager;
             _signInManager = signInManager;
-            _db = db; 
+            _db = db;
         }
 
         public IActionResult Index()
@@ -70,7 +70,7 @@ namespace Traveling_Nerds.Controllers
         public async Task<IActionResult> LogOff()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("Index"); 
+            return RedirectToAction("Index");
         }
     }
 }

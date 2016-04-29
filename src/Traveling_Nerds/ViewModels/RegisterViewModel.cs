@@ -12,7 +12,6 @@ namespace Traveling_Nerds.ViewModels
         //    [userName]
         //    [Display(Name ="User Name")]
         //    public string UerName { get; set; }
-
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
