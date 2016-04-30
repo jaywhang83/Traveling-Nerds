@@ -9,6 +9,6 @@ img.location {
     height: 350px;
 }
 
-img.searchedLocation {
-    height: 1000px;
+.parallax-container {
+    height: 500px;
 }
