@@ -25,10 +25,64 @@ else
     <p>@Html.ActionLink("Register", "Register")</p>
     <p>@Html.ActionLink("Log in", "Login")</p>
 }*@
+<script>
+   $(document).ready(function () {
+       $('.slider').slider({full_width: true, full_height: true});
+   });
+</script>
+<div class="slider">
+    <ul class="slides">
+        <li>
+            <img src="http://img.inspiredluxuryescapes.com/assets/Uploads/ibiza.jpg"> <!-- random image -->
+            <div class="caption center-align">
+                <h3>This is our big Tagline!</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            </div>
+        </li>
+        <li>
+            <img src="http://www.tourist-destinations.com/wp-content/uploads/2011/08/ibiza-by-night.jpg"> <!-- random image -->
+            <div class="caption left-align">
+                <h3>Left Aligned Caption</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            </div>
+        </li>
+        <li>
+            <img src="http://www.best-beaches.com/images/ibiza/ibiza-spain.jpg"> <!-- random image -->
+            <div class="caption right-align">
+                <h3>Right Aligned Caption</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            </div>
+        </li>
+        <li>
+            <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
+            <div class="caption center-align">
+                <h3>This is our big Tagline!</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            </div>
+        </li>
+    </ul>
+</div>
 
-<h4>Here are all of Locations:</h4>
 
-@foreach (var locationList in Model)
-{
-    <img src=@Html.DisplayFor(model => locationList.Image) />
-}
+<div class="container">
+    <div class="row">
+        <h4>Here are all of Locations:</h4>
+        @foreach (var locationList in Model)
+        {
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="location" src=@Html.DisplayFor(model => locationList.Image) />
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                    <p><a href="#">This is a link</a></p>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                </div>
+
+            </div>
+        }
+    </div>
+</div>

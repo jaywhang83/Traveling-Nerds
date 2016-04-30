@@ -38,6 +38,7 @@ namespace Traveling_Nerds
         {
             app.UseIISPlatformHandler();
             app.UseIdentity();
+            app.UseStaticFiles();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
