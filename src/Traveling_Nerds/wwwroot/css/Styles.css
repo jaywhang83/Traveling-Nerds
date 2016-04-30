@@ -1,8 +1,9 @@
-﻿/*div.container {
+﻿div.container {
     align-items: center; 
 }
 
-img.location {
-    height: 500px;
-    width: 500px;
-}*/ 
+img {
+    background-position: center center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -5,18 +5,20 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h4>Create a Location</h4>
-<hr />
-@using (Html.BeginForm())
-{
-    <p>@Html.LabelFor(model => model.Name)</p>
-    <p>@Html.EditorFor(model => model.Name)</p>
+<div class="container">
+    <h4>Create a Location</h4>
+    <hr />
+    @using (Html.BeginForm())
+    {
+        <p>@Html.LabelFor(model => model.Name)</p>
+        <p>@Html.EditorFor(model => model.Name)</p>
 
-    <p>@Html.LabelFor(Model => Model.Image)</p>
-    <p>@Html.EditorFor(model => model.Image)</p>
+        <p>@Html.LabelFor(Model => Model.Image)</p>
+        <p>@Html.EditorFor(model => model.Image)</p>
 
 
-    <input type="submit" value="Create" class="btn btn-default" />
-}
-<hr />
-@Html.ActionLink("Back to list", "Index")
+        <input type="submit" value="Create" class="btn btn-default" />
+    }
+    <hr />
+    @Html.ActionLink("Back to list", "Index")
+</div>

@@ -27,7 +27,8 @@ else
 }*@
 <script>
    $(document).ready(function () {
-       $('.slider').slider({full_width: true, full_height: true});
+       $('.slider').slider({ full_width: true, full_height: true });
+       $('.parallax').parallax();
    });
 </script>
 <div class="slider">
@@ -69,20 +70,34 @@ else
         <h4>Here are all of Locations:</h4>
         @foreach (var locationList in Model)
         {
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="location" src=@Html.DisplayFor(model => locationList.Image) />
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                    <p><a href="#">This is a link</a></p>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
+            <div class="container">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="location" src=@Html.DisplayFor(model => locationList.Image) />
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                        <p><a href="#">This is a link</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
 
+                </div>
             </div>
         }
     </div>
+</div>
+<div class="parallax-container">
+    <div class="parallax"><img src="http://s1.it.atcdn.net/wp-content/uploads/2015/08/2-London.jpg"></div>
+</div>
+<div class="section white">
+    <div class="row container">
+        <h2 class="header">Parallax</h2>
+        <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+    </div>
+</div>
+<div class="parallax-container">
+    <div class="parallax"><img src="http://www.matthewwilliams-ellis.com/wp-content/uploads/2014/01/dubrovnik-at-night-croatia-franciscan-monastery-on-stradun-pictures-of-croatia-by-travel-photographer-and-panoramic-photographer-matthew-williams-ellis.jpg"></div>
 </div>
