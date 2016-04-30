@@ -8,8 +8,7 @@
 
 <div class="container">
     <h2>Search location</h2>
-    <hr />
-    <p>@Html.ActionLink("Add new location", "Create")</p>
+    <br />
     @using (Html.BeginForm("Details", "Location", new { name = ViewBag.Name }, FormMethod.Post))
     {
         <p>@Html.LabelFor(model => model.Name)</p>

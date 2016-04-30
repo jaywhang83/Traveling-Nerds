@@ -5,12 +5,24 @@
     ViewData["Title"] = "Search Location";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>Location Details</h2>
+
+<script>
+   $(document).ready(function () {
+       $('.parallax').parallax();
+       $('.materialboxed').materialbox();
+   });
+</script>
+
+
+<p>@Html.ActionLink("Edit", "Edit", new { id = Model.LocationId }) | @Html.ActionLink("Back Home", "Index", "Account")</p>
 <hr />
-@*<p>@Html.ActionLink("Edit", "Edit", new { id = Model.LocationId }) | @Html.ActionLink("Back to List", "Index")</p>*@
-<hr />
-<p>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</p>
-<p>@Html.DisplayNameFor(model => model.Image):<br /> <img src=@Html.DisplayFor(model => model.Image) width="300"></p>
+<div class="parallax-container">
+    <div class="parallax"><img src=@Html.DisplayFor(model => model.Image)></div>
+    <div class="caption center-align">
+        <h3> @Html.DisplayFor(model => model.Name)</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+    </div>
+</div>
 <hr />
 @if(Model.Postings.Count != 0)
 {
