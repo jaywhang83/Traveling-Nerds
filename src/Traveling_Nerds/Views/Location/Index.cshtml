@@ -1,0 +1,20 @@
+﻿@model Traveling_Nerds.Models.Location
+
+
+@{
+    ViewData["Title"] = "Search Location";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Search location</h2>
+<hr />
+<p>@Html.ActionLink("Add new location", "Create")</p>
+@using (Html.BeginForm("Details", "Location", new { name = ViewBag.Name }, FormMethod.Post))
+{
+    <p>@Html.LabelFor(model => model.Name)</p>
+    <p>@Html.EditorFor(model => model.Name)</p>
+
+    <input type="submit" value="Search" />
+}
+
+

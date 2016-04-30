@@ -4,15 +4,26 @@
 }
 
 @using System.Security.Claims
+@model ICollection<Traveling_Nerds.Models.Location>
+
 
 <h2>Authentication with Identity</h2>
 <hr />
 @if (User.IsSignedIn())
 {
+    <p>@Html.ActionLink("Search", "Index", "Location")</p>
+    <p>@Html.ActionLink("Add location", "Create", "Location")</p>
     <p>Hello @User.GetUserName()!</p>
     @using (Html.BeginForm("LogOff", "Account"))
     {
         <input type="submit" class="btn btn-default" value="Log out" />
+
+        <h4>Here are all of Locations:</h4>
+
+        @foreach (var locationList in Model)
+        {
+            <img src=@Html.DisplayFor(model => locationList.Image) />
+        }
     }
 }
 else
@@ -20,3 +31,4 @@ else
     <p>@Html.ActionLink("Register", "Register")</p>
     <p>@Html.ActionLink("Log in", "Login")</p>
 }
+

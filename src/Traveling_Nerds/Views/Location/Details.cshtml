@@ -1,0 +1,32 @@
+﻿@model Traveling_Nerds.Models.Location
+
+
+@{
+    ViewData["Title"] = "Search Location";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Location Details</h2>
+<hr />
+@*<p>@Html.ActionLink("Edit", "Edit", new { id = Model.LocationId }) | @Html.ActionLink("Back to List", "Index")</p>*@
+<hr />
+<p>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</p>
+<p>@Html.DisplayNameFor(model => model.Image):<br /> <img src=@Html.DisplayFor(model => model.Image) width="300"></p>
+<hr />
+@foreach(var posting in Model.Postings)
+{
+    <p>Html.DisplayFor(model => posting.Title)</p>
+    <p>Html.DisplayFor(model => posting.Author)</p>
+    <p>Html.DisplayFor(model => posting.Date)</p>
+    <p>Html.DisplayFor(model => posting.Image)</p>
+    <p>Html.DisplayFor(model => posting.Description)</p>
+    
+    <hr/>
+    @foreach (var comment in posting.Comments)
+    {
+        <p>Html.DisplayFor(model => comment.Author)</p>
+        <p>Html.DisplayFor(model => commnet.Date)</p>
+        <p>Html.DisplayFor(model => comment.Content)</p>
+    }
+}
+
+

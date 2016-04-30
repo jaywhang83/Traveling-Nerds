@@ -6,6 +6,7 @@ using Microsoft.AspNet.Mvc;
 using Traveling_Nerds.Models;
 using Microsoft.AspNet.Identity;
 using Traveling_Nerds.ViewModels;
+using Microsoft.AspNet.Routing;
 
 namespace Traveling_Nerds.Controllers
 {
@@ -24,7 +25,7 @@ namespace Traveling_Nerds.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(_db.Locations.ToList());
         }
 
         public IActionResult Register()
@@ -58,7 +59,7 @@ namespace Traveling_Nerds.Controllers
             SignInResult result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, isPersistent: true, lockoutOnFailure: false);
             if (result.Succeeded)
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Location");
             }
             else
             {
