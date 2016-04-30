@@ -3,9 +3,46 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
     <title>@ViewBag.Title</title>
 </head>
 <body>
+    @using System.Security.Claims
+    <div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper white">
+            <a href="#!" class="brand-logo"><span class="grey-text darken-4">Traveling Nerds</span></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="@Url.Action("Index", "Location")"><span class="grey-text darken-4">Search</span></a></li>
+                <li><a href="badges.html"><span class="grey-text darken-4">Components</span></a></li>
+               @if (User.IsSignedIn())
+                {
+                    <li><a href="@Url.Action("Create", "Location")"><span class="grey-text darken-4">Add Location</span></a></li>
+                    
+                    <li>
+                        @using (Html.BeginForm("LogOff", "Account"))
+                    {
+                        <li><input type="submit" class="btn btn-default" value="Log out" /></li>
+
+                    }
+                 </li>
+                <li><span class="grey-text darken-4">Hello @User.GetUserName()!</span></li>
+               }
+               else
+               {
+                    <li><a href="@Url.Action("Register", "Account")"><span class="grey-text darken-4">Register</span></a></li>
+                    <li><a href="@Url.Action("Login", "Account")"><span class="grey-text darken-4">Login</span></a></li>
+                }
+            </ul>
+        </div>
+    </nav>
+    </div>
+
     <div>
         @RenderBody()
     </div>

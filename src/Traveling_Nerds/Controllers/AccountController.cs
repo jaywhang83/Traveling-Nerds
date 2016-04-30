@@ -59,7 +59,7 @@ namespace Traveling_Nerds.Controllers
             SignInResult result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, isPersistent: true, lockoutOnFailure: false);
             if (result.Succeeded)
             {
-                return RedirectToAction("Index", "Location");
+                return RedirectToAction("Index");
             }
             else
             {
