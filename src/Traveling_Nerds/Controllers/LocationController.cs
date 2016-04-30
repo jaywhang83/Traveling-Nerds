@@ -63,5 +63,36 @@ namespace Traveling_Nerds.Controllers
             thisLocation.Postings = _db.Postings.Where(x => x.LocationId == thisLocation.LocationId).Include(c => c.Comments).ToList();
             return View(thisLocation);
         }
+
+        public IActionResult Edit(int id)
+        {
+            var thisLocation = _db.Locations.FirstOrDefault(locations => locations.LocationId == id);
+            return View(thisLocation); 
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(Location location)
+        {
+            //var currentUser = await _userManager.FindByIdAsync(User.GetUserId());
+            //location.User = currentUser;
+            _db.Entry(location).State = EntityState.Modified;
+            _db.SaveChanges();
+            return RedirectToAction("Details"); 
+        }
+
+        public IActionResult Delete(int id)
+        {
+            var thisLocation = _db.Locations.FirstOrDefault(locations => locations.LocationId == id);
+            return View(thisLocation);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var thisLocation = _db.Locations.FirstOrDefault(locations => locations.LocationId == id);
+            _db.Locations.Remove(thisLocation);
+            _db.SaveChanges();
+            return RedirectToAction("Index", "Account"); 
+        }
     }
 }
