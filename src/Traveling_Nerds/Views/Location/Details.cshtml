@@ -7,9 +7,9 @@
 }
 
 <script>
-   $(document).ready(function () {
-       $('.parallax').parallax();
-   });
+    $(document).ready(function () {
+        $('.parallax').parallax();
+    });
 </script>
 
 
@@ -22,44 +22,45 @@
         <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
     </div>
 </div>
-<div class="section white">
-<div class="row container">
-    <h2 class="header">Parallax</h2>
-    <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
-</div>
-</div>
-@if(Model.Postings.Count != 0)
-{
-    @foreach (var posting in Model.Postings)
-    {
-        <p>Html.DisplayFor(model => posting.Title)</p>
-        <p>Html.DisplayFor(model => posting.Author)</p>
-        <p>Html.DisplayFor(model => posting.Date)</p>
-        <p>Html.DisplayFor(model => posting.Image)</p>
-        <p>Html.DisplayFor(model => posting.Description)</p>
 
-        <hr />
-        @if (posting.Comments.Count != 0)
+<div class="section white">
+    <div class="row container">
+        <p>@Html.ActionLink("Add new Posting", "Create", "Posting", new { id = Model.LocationId })</p>
+        @if (Model.Postings.Count != 0)
         {
-            @foreach (var comment in posting.Comments)
+            @foreach (var posting in Model.Postings)
             {
-                <p>Html.DisplayFor(model => comment.Author)</p>
-                <p>Html.DisplayFor(model => commnet.Date)</p>
-                <p>Html.DisplayFor(model => comment.Content)</p>
+                <p>@Html.DisplayFor(model => posting.Title)</p>
+                <p>@Html.DisplayFor(model => posting.Author)</p>
+                <p>@Html.DisplayFor(model => posting.Date)</p>
+                <p>@Html.DisplayFor(model => posting.Image)</p>
+                <p>@Html.DisplayFor(model => posting.Description)</p>
+
+                <hr />
+                @if (posting.Comments.Count != 0)
+                {
+                    @foreach (var comment in posting.Comments)
+                    {
+                        <p>Html.DisplayFor(model => comment.Author)</p>
+                        <p>Html.DisplayFor(model => commnet.Date)</p>
+                        <p>Html.DisplayFor(model => comment.Content)</p>
+                    }
+                }
+                else
+                {
+                    <p>There are no Comments!</p>
+
+                }
+
             }
         }
         else
         {
-            <p>There are no Comments!</p>
-
+            <p>There are no postings for this Location!</p>
         }
+    </div>
+</div>
 
-    }
-}
-else
-{
-    <p>There are no postings for this Location!</p>
-}
 <div class="parallax-container">
     <div class="parallax"><img src=@Html.DisplayFor(model => model.Image)></div>
     <div class="caption center-align">
