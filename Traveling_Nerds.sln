@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Traveling_Nerds", "src\Traveling_Nerds\Traveling_Nerds.xproj", "{9623BB66-9E91-4701-A273-3D937D596E4F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D5389E54-A7B8-4E12-ACE6-78C1F1E42DFC}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TravelingNerds.Tests", "TravelingNerds.Tests\TravelingNerds.Tests.xproj", "{1A055AEA-7D62-4761-9DB5-78861CEE1763}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,11 +26,16 @@ Global
 		{9623BB66-9E91-4701-A273-3D937D596E4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9623BB66-9E91-4701-A273-3D937D596E4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9623BB66-9E91-4701-A273-3D937D596E4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A055AEA-7D62-4761-9DB5-78861CEE1763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A055AEA-7D62-4761-9DB5-78861CEE1763}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A055AEA-7D62-4761-9DB5-78861CEE1763}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A055AEA-7D62-4761-9DB5-78861CEE1763}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9623BB66-9E91-4701-A273-3D937D596E4F} = {784EC36F-FC74-4042-A662-216576D4DD3F}
+		{1A055AEA-7D62-4761-9DB5-78861CEE1763} = {D5389E54-A7B8-4E12-ACE6-78C1F1E42DFC}
 	EndGlobalSection
 EndGlobal
