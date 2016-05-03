@@ -1,0 +1,27 @@
+﻿
+@model Traveling_Nerds.Models.Location
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h4>Create a Location</h4>
+    <hr />
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.LocationId)
+
+        <p>@Html.LabelFor(model => model.Name)</p>
+        <p>@Html.EditorFor(model => model.Name)</p>
+
+        <p>@Html.LabelFor(Model => Model.Image)</p>
+        <p>@Html.EditorFor(model => model.Image)</p>
+
+
+        <input type="submit" value="Save" class="btn btn-default" />
+    }
+    <hr />
+    @Html.ActionLink("Back to Search", "Index")
+</div>

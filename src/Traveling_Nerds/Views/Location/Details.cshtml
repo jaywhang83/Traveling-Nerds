@@ -13,7 +13,7 @@
 </script>
 
 
-<p>@Html.ActionLink("Edit", "Edit", new { id = Model.LocationId }) | @Html.ActionLink("Back Home", "Index", "Account")</p>
+<p>@Html.ActionLink("Edit", "Edit", new { id = Model.LocationId }) | @Html.ActionLink("Back Home", "Index", "Account") | @Html.ActionLink("Delete", "Delete", new { id = Model.LocationId })</p>
 <hr />
 <div class="parallax-container">
     <div class="parallax"><img src=@Html.DisplayFor(model => model.Image)></div>

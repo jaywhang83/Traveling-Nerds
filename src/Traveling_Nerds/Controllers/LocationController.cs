@@ -77,7 +77,7 @@ namespace Traveling_Nerds.Controllers
             //location.User = currentUser;
             _db.Entry(location).State = EntityState.Modified;
             _db.SaveChanges();
-            return RedirectToAction("Details"); 
+            return RedirectToAction("Index"); 
         }
 
         public IActionResult Delete(int id)
