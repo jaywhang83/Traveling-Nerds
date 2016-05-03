@@ -45,14 +45,14 @@ namespace Traveling_Nerds.Controllers
         public IActionResult Edit(int id)
         {
             var thisComment = _db.Comments.FirstOrDefault(comments => comments.CommentId == id);
-            ViewBag.PostId = id;
+            //ViewBag.PostId = id;
             return View(thisComment);
         }
 
         [HttpPost]
-        public IActionResult Edit(Comment comment, int id)
+        public IActionResult Edit(Comment comment)
         {
-            comment.PostingId = id;
+            //comment.PostingId = id;
             _db.Entry(comment).State = EntityState.Modified;
             _db.SaveChanges();
             return RedirectToAction("Index", "Account");

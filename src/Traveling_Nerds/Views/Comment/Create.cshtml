@@ -2,16 +2,13 @@
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@model Traveling_Nerds.Models.Posting
+@model Traveling_Nerds.Models.Comment
 
-<h2>Add a new post</h2>
+<h2>Add a new comment</h2>
 <hr />
 @using (Html.BeginForm())
 {
-    @Html.Hidden("@ViewBag.ImageId")
-
-    @Html.LabelFor(model => model.Title)
-    @Html.EditorFor(model => model.Title)
+    @Html.Hidden("@ViewBag.PostId")
 
     @Html.LabelFor(model => model.Author)
     @Html.EditorFor(model => model.Author)
@@ -19,11 +16,8 @@
     @Html.LabelFor(model => model.Date)
     @Html.EditorFor(model => model.Date)
 
-    @Html.LabelFor(model => model.Image)
-    @Html.EditorFor(model => model.Image)
-
-    @Html.LabelFor(model => model.Description)
-    @Html.EditorFor(model => model.Description)
+    @Html.LabelFor(model => model.Content)
+    @Html.EditorFor(model => model.Content)
 
     @*@Html.Hidden(Model.Date.Now)*@
 

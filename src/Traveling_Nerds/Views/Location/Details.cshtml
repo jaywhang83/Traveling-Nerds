@@ -40,13 +40,16 @@
                 <p>@Html.ActionLink("Delete", "Delete", "Posting", new { id = posting.PostingId })</p>
 
                 <hr />
+                <p>@Html.ActionLink("Add new comment", "Create", "Comment", new { id = posting.PostingId })</p>
                 @if (posting.Comments.Count != 0)
                 {
                     @foreach (var comment in posting.Comments)
                     {
-                        <p>Html.DisplayFor(model => comment.Author)</p>
-                        <p>Html.DisplayFor(model => commnet.Date)</p>
-                        <p>Html.DisplayFor(model => comment.Content)</p>
+                        <p>@Html.DisplayFor(model => comment.Author)</p>
+                        <p>@Html.DisplayFor(model => comment.Date)</p>
+                        <p>@Html.DisplayFor(model => comment.Content)</p>
+                        <p>@Html.ActionLink("Edit comment", "Edit", "Comment", new { id = comment.CommentId })</p>
+                        <p>@Html.ActionLink("Delete", "Delete", "Comment", new { id = comment.CommentId })</p>
                     }
                 }
                 else

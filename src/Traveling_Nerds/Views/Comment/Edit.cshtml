@@ -1,0 +1,32 @@
+﻿
+@model Traveling_Nerds.Models.Comment
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h4>Edit this comment</h4>
+    <hr />
+    @using (Html.BeginForm())
+    {
+         @*@Html.Hidden("@ViewBag.PostId")*@
+        @Html.HiddenFor(model => model.CommentId)
+        @Html.HiddenFor(model => model.PostingId)
+
+        <p>@Html.LabelFor(model => model.Author)</p>
+        <p>@Html.EditorFor(model => model.Author)</p> 
+
+        <p>@Html.LabelFor(model => model.Date)</p>
+        <p>@Html.EditorFor(model => model.Date)</p>
+
+        <p>@Html.LabelFor(model => model.Content)</p>
+        <p>@Html.EditorFor(model => model.Content)</p>
+
+
+        <input type="submit" value="Save" class="btn btn-default" />
+    }
+    <hr />
+    @Html.ActionLink("Back to Search", "Index")
+</div>
