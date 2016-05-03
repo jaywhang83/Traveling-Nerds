@@ -33,8 +33,11 @@
                 <p>@Html.DisplayFor(model => posting.Title)</p>
                 <p>@Html.DisplayFor(model => posting.Author)</p>
                 <p>@Html.DisplayFor(model => posting.Date)</p>
-                <p>@Html.DisplayFor(model => posting.Image)</p>
+               <img src=@Html.DisplayFor(model => posting.Image) />
                 <p>@Html.DisplayFor(model => posting.Description)</p>
+                <br />
+                <p>@Html.ActionLink("Edit Posting", "Edit", "Posting", new { id = posting.PostingId })</p>
+                <p>@Html.ActionLink("Delete", "Delete", "Posting", new { id = posting.PostingId })</p>
 
                 <hr />
                 @if (posting.Comments.Count != 0)

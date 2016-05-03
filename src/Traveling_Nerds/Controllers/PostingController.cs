@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 using Traveling_Nerds.Models;
 using Microsoft.AspNet.Identity;
+using Microsoft.Data.Entity;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -37,7 +38,40 @@ namespace Traveling_Nerds.Controllers
             posting.LocationId = id;
             _db.Postings.Add(posting);
             _db.SaveChanges();
-            return RedirectToAction("Details", "Location"); 
+            return RedirectToAction("Index", "Account"); 
+        }
+
+        public IActionResult Edit(int id)
+        {
+            var thisPosting = _db.Postings.FirstOrDefault(postings => postings.PostingId == id);
+            ViewBag.ImageId = id;
+            return View(thisPosting);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Posting posting, int id)
+        {
+            posting.LocationId = id;
+            _db.Entry(posting).State = EntityState.Modified;
+            _db.SaveChanges();
+            return RedirectToAction("Index", "Account");
+        }
+
+        public IActionResult Delete(int id)
+        {
+            var thisPosting = _db.Postings.FirstOrDefault(postings => postings.PostingId == id);
+            return View(thisPosting);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            //var currentUser = await _userManager.FindByIdAsync(User.GetUserId());
+            //comment.User = currentUser;
+            var thisPosting = _db.Postings.FirstOrDefault(postings => postings.PostingId == id);
+            _db.Postings.Remove(thisPosting);
+            _db.SaveChanges();
+            return RedirectToAction("Index", "Account");
         }
     }
 }

@@ -1,0 +1,35 @@
+﻿
+@model Traveling_Nerds.Models.Posting
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h4>Edit this posting</h4>
+    <hr />
+    @using (Html.BeginForm())
+    {
+        @Html.Hidden("@ViewBag.ImageId")
+        @Html.HiddenFor(model => model.PostingId)
+
+
+        <p>@Html.LabelFor(model => model.Title)</p>
+        <p>@Html.EditorFor(model => model.Title)</p>
+
+        <p>@Html.LabelFor(model => model.Author)</p>
+        <p>@Html.EditorFor(model => model.Author)</p>
+
+        <p>@Html.LabelFor(Model => Model.Image)</p>
+        <p>@Html.EditorFor(model => model.Image)</p>
+
+        <p>@Html.LabelFor(Model => Model.Description)</p>
+        <p>@Html.EditorFor(model => model.Description)</p>
+
+
+        <input type="submit" value="Save" class="btn btn-default" />
+    }
+    <hr />
+    @Html.ActionLink("Back to Search", "Index")
+</div>
