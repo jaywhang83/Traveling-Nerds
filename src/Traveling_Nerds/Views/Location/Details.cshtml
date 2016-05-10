@@ -12,6 +12,20 @@
     });
 </script>
 
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.search').click(function () {
+            $.ajax({
+                type: 'GET',
+                url: '@Url.Action("Search")',
+                success: function (result) {
+                    $('#searchForm').html(result);
+                }
+            });
+        });
+    });
+</script>
+
 
 <p>@Html.ActionLink("Edit", "Edit", new { id = Model.LocationId }) | @Html.ActionLink("Back Home", "Index", "Account") | @Html.ActionLink("Delete", "Delete", new { id = Model.LocationId })</p>
 <hr />
@@ -26,6 +40,8 @@
 <div class="section white">
     <div class="row container">
         <p>@Html.ActionLink("Add new Posting", "Create", "Posting", new { id = Model.LocationId })</p>
+        <h4 class="search">Search AirBnb</h4>
+        <div id="searchForm"></div>
         @if (Model.Postings.Count != 0)
         {
             @foreach (var posting in Model.Postings)

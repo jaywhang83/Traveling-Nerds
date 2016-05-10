@@ -94,5 +94,10 @@ namespace Traveling_Nerds.Controllers
             _db.SaveChanges();
             return RedirectToAction("Index", "Account"); 
         }
+
+        public IActionResult Search()
+        {
+            return View(); 
+        }
     }
 }
