@@ -171,6 +171,10 @@ namespace Traveling_Nerds.Migrations
 
                     b.Property<string>("Image");
 
+                    b.Property<float>("Latitude");
+
+                    b.Property<float>("Longitude");
+
                     b.Property<string>("Name");
 
                     b.HasKey("LocationId");

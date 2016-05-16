@@ -8,8 +8,8 @@ using Traveling_Nerds.Models;
 namespace Traveling_Nerds.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20160429225626_AddCommentTable")]
-    partial class AddCommentTable
+    [Migration("20160515234448_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -171,6 +171,10 @@ namespace Traveling_Nerds.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Image");
+
+                    b.Property<float>("Latitude");
+
+                    b.Property<float>("Longitude");
 
                     b.Property<string>("Name");
 

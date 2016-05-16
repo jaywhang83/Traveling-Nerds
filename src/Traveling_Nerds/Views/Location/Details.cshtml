@@ -17,7 +17,8 @@
         $('.search').click(function () {
             $.ajax({
                 type: 'GET',
-                url: '@Url.Action("Search")',
+                data: { location: "@Model.Name" },
+                url: '@Url.Action("GetWeather")',
                 success: function (result) {
                     $('#searchForm').html(result);
                 }

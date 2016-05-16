@@ -126,6 +126,24 @@
           "lib/dnx451/EntityFramework.Relational.Design.dll": {}
         }
       },
+      "Forecast.io/1.0.9": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Forecast.io.45.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Forecast.io.45.dll": {}
+        }
+      },
+      "GoogleMaps.LocationServices/0.9.8.6": {
+        "type": "package",
+        "compile": {
+          "lib/net40/GoogleMaps.LocationServices.dll": {}
+        },
+        "runtime": {
+          "lib/net40/GoogleMaps.LocationServices.dll": {}
+        }
+      },
       "Ix-Async/1.2.5": {
         "type": "package",
         "frameworkAssemblies": [
@@ -1558,7 +1576,7 @@
           "lib/net451/Microsoft.Net.Http.Headers.dll": {}
         }
       },
-      "Newtonsoft.Json/7.0.1": {
+      "Newtonsoft.Json/8.0.3": {
         "type": "package",
         "compile": {
           "lib/net45/Newtonsoft.Json.dll": {}
@@ -1794,12 +1812,15 @@
           "EntityFramework.Commands": "7.0.0-rc1-final",
           "EntityFramework.Core": "7.0.0-rc1-final",
           "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final",
+          "Forecast.io": "1.0.9",
+          "GoogleMaps.LocationServices": "0.9.8.6",
           "Microsoft.AspNet.Identity": "3.0.0-rc1-final",
           "Microsoft.AspNet.Identity.EntityFramework": "3.0.0-rc1-final",
           "Microsoft.AspNet.IISPlatformHandler": "1.0.0-rc1-final",
           "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
           "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
-          "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final"
+          "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final",
+          "Newtonsoft.Json": "8.0.3"
         }
       },
       "xunit/2.1.0": {
@@ -2034,6 +2055,24 @@
         },
         "runtime": {
           "lib/dnx451/EntityFramework.Relational.Design.dll": {}
+        }
+      },
+      "Forecast.io/1.0.9": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Forecast.io.45.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Forecast.io.45.dll": {}
+        }
+      },
+      "GoogleMaps.LocationServices/0.9.8.6": {
+        "type": "package",
+        "compile": {
+          "lib/net40/GoogleMaps.LocationServices.dll": {}
+        },
+        "runtime": {
+          "lib/net40/GoogleMaps.LocationServices.dll": {}
         }
       },
       "Ix-Async/1.2.5": {
@@ -3471,7 +3510,7 @@
           "lib/net451/Microsoft.Net.Http.Headers.dll": {}
         }
       },
-      "Newtonsoft.Json/7.0.1": {
+      "Newtonsoft.Json/8.0.3": {
         "type": "package",
         "compile": {
           "lib/net45/Newtonsoft.Json.dll": {}
@@ -3707,12 +3746,15 @@
           "EntityFramework.Commands": "7.0.0-rc1-final",
           "EntityFramework.Core": "7.0.0-rc1-final",
           "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final",
+          "Forecast.io": "1.0.9",
+          "GoogleMaps.LocationServices": "0.9.8.6",
           "Microsoft.AspNet.Identity": "3.0.0-rc1-final",
           "Microsoft.AspNet.Identity.EntityFramework": "3.0.0-rc1-final",
           "Microsoft.AspNet.IISPlatformHandler": "1.0.0-rc1-final",
           "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
           "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
-          "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final"
+          "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final",
+          "Newtonsoft.Json": "8.0.3"
         }
       },
       "xunit/2.1.0": {
@@ -3947,6 +3989,24 @@
         },
         "runtime": {
           "lib/dnx451/EntityFramework.Relational.Design.dll": {}
+        }
+      },
+      "Forecast.io/1.0.9": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Forecast.io.45.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Forecast.io.45.dll": {}
+        }
+      },
+      "GoogleMaps.LocationServices/0.9.8.6": {
+        "type": "package",
+        "compile": {
+          "lib/net40/GoogleMaps.LocationServices.dll": {}
+        },
+        "runtime": {
+          "lib/net40/GoogleMaps.LocationServices.dll": {}
         }
       },
       "Ix-Async/1.2.5": {
@@ -5384,7 +5444,7 @@
           "lib/net451/Microsoft.Net.Http.Headers.dll": {}
         }
       },
-      "Newtonsoft.Json/7.0.1": {
+      "Newtonsoft.Json/8.0.3": {
         "type": "package",
         "compile": {
           "lib/net45/Newtonsoft.Json.dll": {}
@@ -5620,12 +5680,15 @@
           "EntityFramework.Commands": "7.0.0-rc1-final",
           "EntityFramework.Core": "7.0.0-rc1-final",
           "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final",
+          "Forecast.io": "1.0.9",
+          "GoogleMaps.LocationServices": "0.9.8.6",
           "Microsoft.AspNet.Identity": "3.0.0-rc1-final",
           "Microsoft.AspNet.Identity.EntityFramework": "3.0.0-rc1-final",
           "Microsoft.AspNet.IISPlatformHandler": "1.0.0-rc1-final",
           "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
           "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
-          "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final"
+          "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final",
+          "Newtonsoft.Json": "8.0.3"
         }
       },
       "xunit/2.1.0": {
@@ -5837,6 +5900,29 @@
         "lib/net451/EntityFramework.Relational.Design.dll",
         "lib/net451/EntityFramework.Relational.Design.xml",
         "lib/netcore50/_._"
+      ]
+    },
+    "Forecast.io/1.0.9": {
+      "type": "package",
+      "sha512": "WpVLeKPR6PBIQ/InFXPj6ombUfnEX+OgbYKsalEMLn2AqbVng/GpHVhgQCErAwWQ76aW7uz8zFgoHv+JK5D29g==",
+      "files": [
+        "Forecast.io.1.0.9.nupkg",
+        "Forecast.io.1.0.9.nupkg.sha512",
+        "Forecast.io.nuspec",
+        "lib/net40/Forecast.io.40.dll",
+        "lib/net45/Forecast.io.45.dll",
+        "nuget.exe"
+      ]
+    },
+    "GoogleMaps.LocationServices/0.9.8.6": {
+      "type": "package",
+      "sha512": "PC5zcMCpsDp7JdMIL91AAyEInhXfjgXbrm6/KLPqryw5MejD59GvZGPcWEcWNXkiUSt3L2SnAbz4Y/UGcoK1vg==",
+      "files": [
+        "content/GoogleMaps.LocationServices.readme.txt",
+        "GoogleMaps.LocationServices.0.9.8.6.nupkg",
+        "GoogleMaps.LocationServices.0.9.8.6.nupkg.sha512",
+        "GoogleMaps.LocationServices.nuspec",
+        "lib/net40/GoogleMaps.LocationServices.dll"
       ]
     },
     "Ix-Async/1.2.5": {
@@ -6949,9 +7035,9 @@
         "Microsoft.Net.Http.Headers.nuspec"
       ]
     },
-    "Newtonsoft.Json/7.0.1": {
+    "Newtonsoft.Json/8.0.3": {
       "type": "package",
-      "sha512": "q3V4KLetMLnt1gpAVWgtXnHjKs0UG/RalBc29u2ZKxd5t5Ze4JBL5WiiYIklJyK/5CRiIiNwigVQUo0FgbsuWA==",
+      "sha512": "KGsYQdS2zLH+H8x2cZaSI7e+YZ4SFIbyy1YJQYl6GYBWjf5o4H1A68nxyq+WTyVSOJQ4GqS/DiPE+UseUizgMg==",
       "files": [
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
@@ -6965,8 +7051,8 @@
         "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll",
         "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.xml",
-        "Newtonsoft.Json.7.0.1.nupkg",
-        "Newtonsoft.Json.7.0.1.nupkg.sha512",
+        "Newtonsoft.Json.8.0.3.nupkg",
+        "Newtonsoft.Json.8.0.3.nupkg.sha512",
         "Newtonsoft.Json.nuspec",
         "tools/install.ps1"
       ]
@@ -7101,7 +7187,7 @@
     "System.Diagnostics.DiagnosticSource/4.0.0-beta-23516": {
       "type": "package",
       "serviceable": true,
-      "sha512": "WHVhr5/p8UDjqNV7l9PCxZgOufE2tO4XOWva9pau9c7PzJJTdB1By6scO5dgHLpmlB/u4y27Y9AzT8AqtG8sxw==",
+      "sha512": "0uDR/UOmFCNPDCyHEPHhCrk6c1iRnDp00YqwSZ8Qf5aaaJjm4WXnf4Q9xZw4OoApsSiODSypDMdpQU24IxR16A==",
       "files": [
         "lib/dotnet5.2/System.Diagnostics.DiagnosticSource.dll",
         "lib/dotnet5.2/System.Diagnostics.DiagnosticSource.xml",
@@ -7290,7 +7376,7 @@
     "System.Numerics.Vectors/4.1.1-beta-23516": {
       "type": "package",
       "serviceable": true,
-      "sha512": "jphbCfQB30LZBC/8kNQtAaaCcKzCFIFnRyUvYapNOozvleUvwI6sYG9d3/WamMcalnNcHDgIlQ713QOv9aweVA==",
+      "sha512": "FCYCEjc3BXBTpVZTxMqf2m/sGYyDzLwICy5lNKgZzT8WfshJhsTGjJuETwsh1Cwi6bksw9YiTB6yeeWBBJDnTA==",
       "files": [
         "lib/dotnet5.4/System.Numerics.Vectors.dll",
         "lib/MonoAndroid10/_._",
@@ -7928,6 +8014,9 @@
   },
   "projectFileDependencyGroups": {
     "": [
+      "Forecast.io >= 1.0.9",
+      "GoogleMaps.LocationServices >= 0.9.8.6",
+      "Newtonsoft.Json >= 8.0.3",
       "Traveling_Nerds >= 1.0.0-*",
       "xunit >= 2.1.0",
       "xunit.runner.dnx >= 2.1.0-rc1-*"

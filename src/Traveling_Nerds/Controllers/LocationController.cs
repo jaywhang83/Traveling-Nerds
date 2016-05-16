@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Hosting;
 using Microsoft.Data.Entity;
 using System.Security.Claims;
+using GoogleMaps.LocationServices;
 
 namespace Traveling_Nerds.Controllers
 {
@@ -95,9 +96,16 @@ namespace Traveling_Nerds.Controllers
             return RedirectToAction("Index", "Account"); 
         }
 
-        public IActionResult Search()
+        public IActionResult GetWeather(string location)
         {
-            return View(); 
+            var address = location;
+            var locationService = new GoogleLocationService();
+            var coord = locationService.GetLatLongFromAddress(address);
+            var latitude = (float)coord.Latitude;
+            var longitude = (float)coord.Longitude;
+
+            var weatherForecast = Location.GetWeatherForecast(latitude, longitude); 
+            return View(weatherForecast); 
         }
     }
 }

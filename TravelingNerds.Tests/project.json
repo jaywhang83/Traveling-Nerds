@@ -1,7 +1,10 @@
-﻿{
+{
   "version": "1.0.0-*",
 
   "dependencies": {
+    "Forecast.io": "1.0.9",
+    "GoogleMaps.LocationServices": "0.9.8.6",
+    "Newtonsoft.Json": "8.0.3",
     "Traveling_Nerds": "1.0.0-*",
     "xunit": "2.1.0",
     "xunit.runner.dnx": "2.1.0-rc1-*"
