@@ -14,13 +14,13 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-        $('.search').click(function () {
+        $('.weather').click(function () {
             $.ajax({
                 type: 'GET',
                 data: { location: "@Model.Name" },
                 url: '@Url.Action("GetWeather")',
                 success: function (result) {
-                    $('#searchForm').html(result);
+                    $('#result').html(result);
                 }
             });
         });
@@ -41,8 +41,8 @@
 <div class="section white">
     <div class="row container">
         <p>@Html.ActionLink("Add new Posting", "Create", "Posting", new { id = Model.LocationId })</p>
-        <h4 class="search">Search AirBnb</h4>
-        <div id="searchForm"></div>
+        <h4 class="weather">Weather Forecast</h4>
+        <div id="result"></div>
         @if (Model.Postings.Count != 0)
         {
             @foreach (var posting in Model.Postings)
