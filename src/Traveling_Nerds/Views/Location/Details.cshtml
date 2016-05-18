@@ -29,12 +29,11 @@
 
 
 <p>@Html.ActionLink("Edit", "Edit", new { id = Model.LocationId }) | @Html.ActionLink("Back Home", "Index", "Account") | @Html.ActionLink("Delete", "Delete", new { id = Model.LocationId })</p>
-<hr />
+
 <div class="parallax-container">
     <div class="parallax"><img src=@Html.DisplayFor(model => model.Image)></div>
     <div class="caption center-align">
         <h3> @Html.DisplayFor(model => model.Name)</h3>
-        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
     </div>
 </div>
 
@@ -42,6 +41,18 @@
     <div class="row container">   
         <h4 class="weather">Weather Forecast</h4>
         <div id="result"></div>
+    </div>
+</div>
+
+<div class="parallax-container">
+    <div class="parallax"><img src=@Html.DisplayFor(model => model.Image)></div>
+    <div class="caption center-align">
+        <h3> @Html.DisplayFor(model => model.Name)</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+    </div>
+</div>
+<div class="section-white">
+    <div class="row container">
         <p>@Html.ActionLink("Add new Posting", "Create", "Posting", new { id = Model.LocationId })</p>
         @if (Model.Postings.Count != 0)
         {
@@ -81,13 +92,5 @@
         {
             <p>There are no postings for this Location!</p>
         }
-    </div>
-</div>
-
-<div class="parallax-container">
-    <div class="parallax"><img src=@Html.DisplayFor(model => model.Image)></div>
-    <div class="caption center-align">
-        <h3> @Html.DisplayFor(model => model.Name)</h3>
-        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
     </div>
 </div>

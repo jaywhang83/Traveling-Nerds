@@ -1,15 +1,22 @@
 ﻿@model List<Dictionary<string, string>>
 
+
+@*<iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="1000" src="http://forecast.io/embed/#lat=45.520705&lon=-122.677397&name=Downtown Portland"> </iframe>*@
 @foreach (var weather in Model)
-{  
-    <p>Date: @weather["date"]</p>
-    <p>Min Temperature: @weather["minTemp"]</p>
-
-    <p>Max Temperature: @weather["maxTemp"]</p>
-
-    <p>Weather Summary: @weather["summary"]</p>
-    <hr />   
+{
+    <div class="col s12">
+        <div class="col s6">
+            <strong>@weather["date"]</strong>
+            <p>@weather["summary"]</p>
+        </div>
+        <div class="col s6">
+            <p>Low: @weather["minTemp"]</p>
+            <p>High: @weather["maxTemp"]</p>
+        </div>       
+    </div>
+    <hr />
 }
+
 
 
 

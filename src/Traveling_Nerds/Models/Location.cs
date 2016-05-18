@@ -39,6 +39,7 @@ namespace Traveling_Nerds.Models
                 loc.Add("maxTemp", response.daily.data[i].temperatureMax.ToString());
                 loc.Add("minTemp", response.daily.data[i].temperatureMin.ToString());
                 loc.Add("summary", response.daily.data[i].summary);
+                loc.Add("icon", response.daily.data[i].icon); 
                 list.Add(loc);
             }
             return list;
