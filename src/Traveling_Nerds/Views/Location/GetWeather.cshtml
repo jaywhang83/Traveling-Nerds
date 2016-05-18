@@ -1,22 +1,14 @@
 ﻿@model List<Dictionary<string, string>>
 
-@*@{
-    ViewBag.Title = "Forecast";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}*@
-
 @foreach (var weather in Model)
-{
+{  
+    <p>Date: @weather["date"]</p>
+    <p>Min Temperature: @weather["minTemp"]</p>
 
-    <ul>
-        <p>Date: @weather["date"]</p>
-        <li>Min Temperature: @weather["minTemp"]</li>
+    <p>Max Temperature: @weather["maxTemp"]</p>
 
-        <li>Max Temperature: @weather["maxTemp"]</li>
-
-        <li>Weather Summary: @weather["summary"]</li>
-        <hr />
-    </ul>
+    <p>Weather Summary: @weather["summary"]</p>
+    <hr />   
 }
 
 

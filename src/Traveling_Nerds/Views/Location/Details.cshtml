@@ -39,10 +39,10 @@
 </div>
 
 <div class="section white">
-    <div class="row container">
-        <p>@Html.ActionLink("Add new Posting", "Create", "Posting", new { id = Model.LocationId })</p>
+    <div class="row container">   
         <h4 class="weather">Weather Forecast</h4>
         <div id="result"></div>
+        <p>@Html.ActionLink("Add new Posting", "Create", "Posting", new { id = Model.LocationId })</p>
         @if (Model.Postings.Count != 0)
         {
             @foreach (var posting in Model.Postings)
@@ -50,7 +50,7 @@
                 <p>@Html.DisplayFor(model => posting.Title)</p>
                 <p>@Html.DisplayFor(model => posting.Author)</p>
                 <p>@Html.DisplayFor(model => posting.Date)</p>
-               <img src=@Html.DisplayFor(model => posting.Image) />
+                <img src=@Html.DisplayFor(model => posting.Image) />
                 <p>@Html.DisplayFor(model => posting.Description)</p>
                 <br />
                 <p>@Html.ActionLink("Edit Posting", "Edit", "Posting", new { id = posting.PostingId })</p>
