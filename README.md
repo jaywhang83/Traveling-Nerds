@@ -3,7 +3,7 @@
 #### By Jay Whang
 
 ## Description
-_A travel blog where user can search location and get information and AriBnb listing about that location._
+_A travel blog where user can search location and get seven day weather forecast, information, picture of that location._
 
 
 ## Setup/Installation Requirements
