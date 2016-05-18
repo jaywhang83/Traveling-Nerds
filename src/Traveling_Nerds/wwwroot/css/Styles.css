@@ -57,3 +57,7 @@ ul.socialMedia li a i.google-plus {
 ul.socialMedia li a i:hover {
     opacity: .7;
 }
+
+.options {
+    margin-left: 20px;
+}

@@ -6,29 +6,11 @@
 @using System.Security.Claims
 @model ICollection<Traveling_Nerds.Models.Location>
 
-
-
-@*@if (User.IsSignedIn())
-{
-    <p>@Html.ActionLink("Search", "Index", "Location")</p>
-    <p>@Html.ActionLink("Add location", "Create", "Location")</p>
-    <p>Hello @User.GetUserName()!</p>
-    @using (Html.BeginForm("LogOff", "Account"))
-    {
-        <input type="submit" class="btn btn-default" value="Log out" />
-
-        
-    }
-}
-else
-{
-    <p>@Html.ActionLink("Register", "Register")</p>
-    <p>@Html.ActionLink("Log in", "Login")</p>
-}*@
 <script>
    $(document).ready(function () {
        $('.slider').slider({ full_width: true, full_height: true });
        $('.parallax').parallax();
+       $('.materialboxed').materialbox();
    });
 </script>
 <div class="slider">
@@ -68,18 +50,18 @@ else
 <div class="container">
     <div class="row">
         <div class="container">
-            <h4>Here are all of Locations:</h4>
+            <h4>Here are all of Locations</h4>
             @foreach (var locationList in Model)
             {
                 <div class="container">
                     <div class="card">
                         <div class="card-image waves-effect waves-block waves-light">
-                            <img class="location" src=@Html.DisplayFor(model => locationList.Image) />
+                            <img class="materialboxed location" data-caption="A picture of beautiful Madrid, Spain" width="250" src=@Html.DisplayFor(model => locationList.Image) />
                         </div>
                         <div class="card-content">
                             <span class="card-title activator grey-text text-darken-4">@Html.DisplayFor(model => locationList.Name)</span>
                         </div>
-                    </div>
+                     </div>
                 </div>
             }
         </div>

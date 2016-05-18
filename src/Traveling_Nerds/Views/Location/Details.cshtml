@@ -27,9 +27,9 @@
     });
 </script>
 
-
-<p>@Html.ActionLink("Edit", "Edit", new { id = Model.LocationId }) | @Html.ActionLink("Back Home", "Index", "Account") | @Html.ActionLink("Delete", "Delete", new { id = Model.LocationId })</p>
-
+<div class="options">
+    <p>@Html.ActionLink("Edit", "Edit", new { id = Model.LocationId }) | @Html.ActionLink("Back Home", "Index", "Account") | @Html.ActionLink("Delete", "Delete", new { id = Model.LocationId })</p>
+</div>
 <div class="parallax-container">
     <div class="parallax"><img src=@Html.DisplayFor(model => model.Image)></div>
     <div class="caption center-align">
@@ -47,8 +47,6 @@
 <div class="parallax-container">
     <div class="parallax"><img src=@Html.DisplayFor(model => model.Image)></div>
     <div class="caption center-align">
-        <h3> @Html.DisplayFor(model => model.Name)</h3>
-        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
     </div>
 </div>
 <div class="section-white">
